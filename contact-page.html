@@ -1,0 +1,89 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MY COFFEE CORNER - Contact</title>
+    <meta name="desciption" content="Contact page for My Coffee Corner" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;500&family=Julius+Sans+One&family=Nunito+Sans:opsz@6..12&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://kit.fontawesome.com/a2e18a1d66.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <a href="#main" class="skip-nav-link">Skip to main content</a>
+    <header>
+      <a href="index.html"><img src="images/logo.png" alt="Logo of My Coffee Corner" class="logo" /></a>
+      <input type="checkbox" id="menu-checkbox" />
+      <label for="menu-checkbox"
+        ><span class="hidden">Hamburger menu</span
+        ><img src="images/hamburger-menu.jpg" class="hamburger-menu" alt="Hamburger menu icon"
+      /></label>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog-list-page.html">Blogs</a></li>
+          <li><a href="about-page.html">About</a></li>
+          <li><a aria-current="page" href="contact-page.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <div>
+        <img
+          src="images/contact_img.jpg"
+          alt="Image of a coffee cup next to a laptop and a notebook"
+          class="hero-image"
+        />
+      </div>
+      <section>
+        <h1>CONTACT</h1>
+        <p>Your thoughts and questions are warmly welcomed here.</p>
+        <p>Let's embark on a delightful coffee conversation together!</p>
+        <form id="contact-form" novalidate>
+          <div>
+            <label for="name">NAME*</label>
+            <input type="text" name="name" id="name" />
+            <div class="form-error" id="nameError">Name must be over 5 characters.</div>
+          </div>
+          <div>
+            <label for="email">EMAIL*</label>
+            <input type="email" name="email" id="email" />
+            <div class="form-error" id="emailError">Please enter a valid email address</div>
+          </div>
+          <div>
+            <label for="subject">SUBJECT*</label>
+            <input type="text" name="subject" id="subject" />
+            <div class="form-error" id="subjectError">Subject must be over 15 characters.</div>
+          </div>
+          <div>
+            <label for="addMessage">MESSAGE*</label>
+            <textarea id="addMessage" name="addMessage"></textarea>
+            <div class="form-error" id="addMessageError">Message must be over 25 characters.</div>
+          </div>
+          <button class="cta cta-send">Send message</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <a href="https://www.facebook.com/"
+        ><i class="fa-brands fa-facebook" title="Facebook link icon"></i
+        ><span class="fa-sr-only">Facebook link icon</span></a
+      >
+      <a href="https://www.instagram.com/"
+        ><i class="fa-brands fa-instagram" title="Instagram link icon"></i
+        ><span class="fa-sr-only">Instagram link icon</span></a
+      >
+      <a href="https://twitter.com/"
+        ><i class="fa-brands fa-twitter" title="Twitter link icon"></i
+        ><span class="fa-sr-only">Twitter link icon</span></a
+      >
+      <p>Copyright &copy; 2023 Charlotte Valset</p>
+    </footer>
+  </body>
+</html>

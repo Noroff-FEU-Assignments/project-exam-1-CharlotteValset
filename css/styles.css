@@ -1,0 +1,137 @@
+:root {
+  --font-family: "Nunito Sans", Arial, sans-serif;
+  --medium_beige: #eadfce;
+  --light_beige: #fcfaf7;
+  --white: #fff;
+  --light_green: #d3f5da;
+  --medium_green: #8aaa91;
+  --light_blue: #e2eefe;
+  --medium_blue: #a8bddb;
+  --text-colour: #2e2e2e;
+  --dark_grey: #676767;
+  --light_grey: #d9d9d9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+}
+
+.skip-nav-link {
+  position: absolute;
+  overflow: hidden;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+}
+
+.skip-nav-link:focus {
+  top: 0px;
+  left: 0px;
+  width: auto;
+  height: auto;
+  background-color: #fff;
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--white);
+  padding: 10px 0px;
+}
+
+.logo {
+  max-width: 80%;
+  padding: 8px;
+}
+
+nav {
+  position: absolute;
+  z-index: 1;
+  background-color: var(--white);
+  width: 100vw;
+  top: 48px;
+  padding: 12px 0px;
+  box-shadow: 0px 2px 2px 0px #00000040;
+}
+
+.nav-menu {
+  color: var(--light_blue);
+  width: 220px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+  background-color: #fff;
+}
+
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+nav li {
+  padding: 6px 36px;
+}
+
+li a {
+  font-size: 1.25rem;
+}
+
+li a[aria-current="page"] {
+  background-color: var(--light_blue);
+  padding: 5px 12px;
+  box-shadow: 0px 2px 2px 0px #00000040;
+}
+
+li a:hover {
+  background-color: var(--medium_blue);
+  /*   width: 140px;
+  height: 25px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-menu {
+  height: 54px;
+  width: 54px;
+  position: absolute;
+  right: 12px;
+  bottom: 9px;
+}
+
+nav,
+#menu-checkbox {
+  display: none;
+}
+
+#menu-checkbox:checked ~ nav {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 70px;
+}
