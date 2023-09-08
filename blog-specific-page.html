@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;500&family=Julius+Sans+One&family=Nunito+Sans:opsz@6..12&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,700&display=swap"
       rel="stylesheet"
     />
     <script src="https://kit.fontawesome.com/a2e18a1d66.js" crossorigin="anonymous"></script>
@@ -17,7 +17,12 @@
   <body>
     <a href="#main" class="skip-nav-link">Skip to main content</a>
     <header>
-      <a href="index.html"><img src="images/logo.png" alt="Logo of My Coffee Corner" /></a>
+      <a href="index.html"><img src="images/logo.png" alt="Logo of My Coffee Corner" class="logo" /></a>
+      <input type="checkbox" id="menu-checkbox" />
+      <label for="menu-checkbox"
+        ><span class="hidden">Hamburger menu</span
+        ><img src="images/hamburger-menu.jpg" class="hamburger-menu" alt="Hamburger menu icon"
+      /></label>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -29,9 +34,37 @@
     </header>
     <main id="main">
       <button onclick="history.back()" class="back-button"><i class="fa-solid fa-chevron-left"></i>BACK</button>
-      <section>
-        <h1>Post title</h1>
-        <div>Blog post here</div>
+      <section class="blog-post_container">
+        <h1 class="blog-post_heading">THE COFFEE BERRY</h1>
+        <img src="images/coffee_berry.jpg" alt="" class="blog-post_image" />
+        <div class="blog-post_text-container">
+          <p class="blog-post_text">
+            Let's delve into the intriguing tale of the coffee berry – the unassuming yet essential catalyst behind the
+            cherished coffee we relish.
+          </p>
+          <p class="blog-post_text">
+            Nestled within coffee-growing landscapes, the coffee berry, often referred to as a cherry, is where the
+            coffee journey begins. Adorning the coffee plant, it transitions from vibrant green to ripe red, signalling
+            its readiness for the skilled hands of harvesters. This pivotal moment demands expertise to ensure the
+            coffee's ultimate quality.
+          </p>
+          <p class="blog-post_text">
+            Within this berry lie two seeds, known as coffee beans, harbouring the chemistry that defines the brew's
+            flavours. Meticulous processing separates these beans from their pulpy surroundings, initiating a journey
+            that continues from the plantation to the roasting facility. This meticulous process, influenced by factors
+            like the region's climate and harvest timing, shapes each bean's destiny and imparts its unique narrative.
+          </p>
+          <p class="blog-post_text">
+            In essence, the coffee berry encapsulates a world of potential, offering a gateway to an array of tastes and
+            aromas. Its voyage from berry to cup embodies the dedication of countless individuals working to deliver a
+            sensory experience that unites people worldwide. As you savour your next cup, take a moment to honour the
+            journey of this unassuming berry, which wields the power to stir senses and foster global connections.
+          </p>
+        </div>
+        <div class="blog-post-info_container">
+          <p class="blog-post-info_text">Posted: 2023-08-29</p>
+          <p class="blog-post-info_text">Categories: Process</p>
+        </div>
       </section>
     </main>
     <footer>

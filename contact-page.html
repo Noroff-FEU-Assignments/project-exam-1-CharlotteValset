@@ -43,25 +43,27 @@
       </div>
       <section>
         <h1>CONTACT</h1>
-        <p>Your thoughts and questions are warmly welcomed here.</p>
-        <p>Let's embark on a delightful coffee conversation together!</p>
-        <form id="contact-form" novalidate>
-          <div>
+        <div class="contact-textcontainer">
+          <p class="contact-text">Your thoughts and questions are warmly welcomed here.</p>
+          <p class="contact-text">Let's embark on a delightful coffee conversation together!</p>
+        </div>
+        <form id="contact-form" class="form-container" novalidate>
+          <div class="label-input-alignment">
             <label for="name">NAME*</label>
             <input type="text" name="name" id="name" />
             <div class="form-error" id="nameError">Name must be over 5 characters.</div>
           </div>
-          <div>
+          <div class="label-input-alignment">
             <label for="email">EMAIL*</label>
             <input type="email" name="email" id="email" />
             <div class="form-error" id="emailError">Please enter a valid email address</div>
           </div>
-          <div>
+          <div class="label-input-alignment">
             <label for="subject">SUBJECT*</label>
             <input type="text" name="subject" id="subject" />
             <div class="form-error" id="subjectError">Subject must be over 15 characters.</div>
           </div>
-          <div>
+          <div class="label-input-alignment">
             <label for="addMessage">MESSAGE*</label>
             <textarea id="addMessage" name="addMessage"></textarea>
             <div class="form-error" id="addMessageError">Message must be over 25 characters.</div>

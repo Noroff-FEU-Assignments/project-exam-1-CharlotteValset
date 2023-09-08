@@ -24,7 +24,7 @@
         ><img src="images/hamburger-menu.jpg" class="hamburger-menu" alt="Hamburger menu icon"
       /></label>
       <nav>
-        <ul class="nav-menu">
+        <ul>
           <li><a aria-current="page" href="index.html">Home</a></li>
           <li><a href="blog-list-page.html">Blogs</a></li>
           <li><a href="about-page.html">About</a></li>
@@ -33,21 +33,41 @@
       </nav>
     </header>
     <main id="main">
-      <img src="images/hero_img.jpg" alt="Image of a coffee cup on a wooden table" class="hero-image" />
       <section>
-        <h1>Welcome to MY COFFEE CORNER</h1>
-        <p>
-          Join me in exploring the captivating odyssey that your coffee embarks on – from the flourishing berry to the
-          enchanting brew in your cup. Here within my blog, I delve into the intricate stages of this journey,
-          unraveling the story that awakens your senses with every sip.
-        </p>
+        <div>
+          <img src="images/hero_img.jpg" alt="Image of a coffee cup on a wooden table" class="hero-image" />
+        </div>
+        <div class="text-box_container">
+          <h1 class="welcome-heading">Welcome to MY COFFEE CORNER</h1>
+          <p class="welcome-text">
+            Join me in exploring the captivating odyssey that your coffee embarks on – from the flourishing berry to the
+            enchanting brew in your cup. Here within my blog, I delve into the intricate stages of this journey,
+            unraveling the story that awakens your senses with every sip.
+          </p>
+        </div>
       </section>
       <section>
         <h2>LATEST POSTS</h2>
-        <div>Carousel here</div>
+        <div class="carousel-mobile">
+          <img src="images/carousel-arrow_left.jpg" alt="" class="carousel-arrow" />
+
+          <a href="blog-specific-page.html" class="latest-posts_card-container">
+            <img src="images/coffee_berry.jpg" alt="image of coffee berries" class="latest-posts_card-image" />
+            <h3 class="latest-posts_card-heading">THE COFFEE BERRY</h3>
+          </a>
+
+          <img src="images/carousel-arrow_right.jpg" alt="" class="carousel-arrow" />
+        </div>
       </section>
-      <section>
-        <div>Blog post here</div>
+      <section class="blog_card-container">
+        <div>
+          <img src="images/coffee_berry.jpg" alt="image of coffee berries" class="blog_card-image" />
+        </div>
+        <div class="blog_card-text">
+          <h2>THE COFFEE BERRY</h2>
+          <p>Let's delve into the intriguing tale of the coffee berry – the unassuming yet essential...</p>
+          <a href="blog-specific-page.html" class="cta cta-card">Read more</a>
+        </div>
       </section>
     </main>
     <footer>
