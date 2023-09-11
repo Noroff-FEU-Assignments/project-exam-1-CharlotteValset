@@ -1,7 +1,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>MY COFFEE CORNER - Homepage</title>
+    <title>My Coffee Corner - Homepage</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.svg" />
     <meta name="desciption" content="Homepage for My Coffee Corner" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -24,19 +25,17 @@
         ><img src="images/hamburger-menu.jpg" class="hamburger-menu" alt="Hamburger menu icon"
       /></label>
       <nav>
-        <ul>
+        <ul class="nav-menu">
           <li><a aria-current="page" href="index.html">Home</a></li>
-          <li><a href="blog-list-page.html">Blogs</a></li>
+          <li><a href="blog-list-page.html">Blog</a></li>
           <li><a href="about-page.html">About</a></li>
           <li><a href="contact-page.html">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main id="main">
-      <section>
-        <div>
-          <img src="images/hero_img.jpg" alt="Image of a coffee cup on a wooden table" class="hero-image" />
-        </div>
+      <section class="hero-layout">
+        <img src="images/hero_img.jpg" alt="Image of a coffee cup on a wooden table" class="hero-image" />
         <div class="text-box_container">
           <h1 class="welcome-heading">Welcome to MY COFFEE CORNER</h1>
           <p class="welcome-text">
@@ -60,12 +59,13 @@
         </div>
       </section>
       <section class="blog_card-container">
-        <div>
-          <img src="images/coffee_berry.jpg" alt="image of coffee berries" class="blog_card-image" />
-        </div>
-        <div class="blog_card-text">
-          <h2>THE COFFEE BERRY</h2>
-          <p>Let's delve into the intriguing tale of the coffee berry – the unassuming yet essential...</p>
+        <img src="images/coffee_berry.jpg" alt="image of coffee berries" class="blog_card-image" />
+        <div class="blog_card-textbox">
+          <h2 class="blog_card-heading">THE COFFEE BERRY</h2>
+          <p class="blog_card-text">
+            Let's delve into the intriguing tale of the coffee berry – the unassuming yet essential Let's delve into the
+            intriguing tale of the coffee berry – the unassuming yet essential...
+          </p>
           <a href="blog-specific-page.html" class="cta cta-card">Read more</a>
         </div>
       </section>

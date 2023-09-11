@@ -1,7 +1,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>MY COFFEE CORNER - Contact</title>
+    <title>My Coffee Corner - Contact</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.svg" />
     <meta name="desciption" content="Contact page for My Coffee Corner" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,51 +26,53 @@
         ><img src="images/hamburger-menu.jpg" class="hamburger-menu" alt="Hamburger menu icon"
       /></label>
       <nav>
-        <ul>
+        <ul class="nav-menu">
           <li><a href="index.html">Home</a></li>
-          <li><a href="blog-list-page.html">Blogs</a></li>
+          <li><a href="blog-list-page.html">Blog</a></li>
           <li><a href="about-page.html">About</a></li>
           <li><a aria-current="page" href="contact-page.html">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main id="main">
-      <div>
+      <section class="contact-container">
         <img
           src="images/contact_img.jpg"
           alt="Image of a coffee cup next to a laptop and a notebook"
-          class="hero-image"
+          class="contact-image"
         />
-      </div>
-      <section>
-        <h1>CONTACT</h1>
-        <div class="contact-textcontainer">
-          <p class="contact-text">Your thoughts and questions are warmly welcomed here.</p>
-          <p class="contact-text">Let's embark on a delightful coffee conversation together!</p>
+        <div class="contact-content-container">
+          <h1 class="contact-heading">CONTACT</h1>
+          <div class="contact-textcontainer">
+            <p class="contact-text">Your thoughts and questions are warmly welcomed here.</p>
+            <p class="contact-text">Let's embark on a delightful coffee conversation together!</p>
+          </div>
+          <form id="contact-form" class="form-container" novalidate>
+            <div class="label-input-alignment">
+              <label for="name">NAME*</label>
+              <input type="text" name="name" id="name" />
+              <div class="form-error" id="nameError">Name must be over 5 characters.</div>
+            </div>
+            <div class="label-input-alignment">
+              <label for="email">EMAIL*</label>
+              <input type="email" name="email" id="email" />
+              <div class="form-error" id="emailError">Please enter a valid email address</div>
+            </div>
+            <div class="label-input-alignment">
+              <label for="subject">SUBJECT*</label>
+              <input type="text" name="subject" id="subject" />
+              <div class="form-error" id="subjectError">Subject must be over 15 characters.</div>
+            </div>
+            <div class="label-input-alignment">
+              <label for="addMessage">MESSAGE*</label>
+              <textarea id="addMessage" name="addMessage"></textarea>
+              <div class="form-error" id="addMessageError">Message must be over 25 characters.</div>
+            </div>
+            <div class="cta-contact-layout">
+              <button class="cta cta-send">Send message</button>
+            </div>
+          </form>
         </div>
-        <form id="contact-form" class="form-container" novalidate>
-          <div class="label-input-alignment">
-            <label for="name">NAME*</label>
-            <input type="text" name="name" id="name" />
-            <div class="form-error" id="nameError">Name must be over 5 characters.</div>
-          </div>
-          <div class="label-input-alignment">
-            <label for="email">EMAIL*</label>
-            <input type="email" name="email" id="email" />
-            <div class="form-error" id="emailError">Please enter a valid email address</div>
-          </div>
-          <div class="label-input-alignment">
-            <label for="subject">SUBJECT*</label>
-            <input type="text" name="subject" id="subject" />
-            <div class="form-error" id="subjectError">Subject must be over 15 characters.</div>
-          </div>
-          <div class="label-input-alignment">
-            <label for="addMessage">MESSAGE*</label>
-            <textarea id="addMessage" name="addMessage"></textarea>
-            <div class="form-error" id="addMessageError">Message must be over 25 characters.</div>
-          </div>
-          <button class="cta cta-send">Send message</button>
-        </form>
       </section>
     </main>
     <footer>
