@@ -2,6 +2,7 @@
   --font-family: "Nunito Sans", Arial, sans-serif;
   --medium_beige: #eadfce;
   --light_beige: #fcfaf7;
+  /* --light_beige: #f8f3ed; */
   --white: #fff;
   --light_green: #d3f5da;
   --medium_green: #8aaa91;
@@ -12,7 +13,6 @@
   --footer: #414141;
   --light_grey: #d9d9d9;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +21,22 @@
 
 body {
   font-family: var(--font-family);
+}
+
+/* ERROR_MESSAGE */
+.message {
+  border: 2px solid #a71515;
+  background-color: #bfbfbf;
+  color: black;
+  padding: 15px;
+  max-width: 500px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.error {
+  background-color: #fff;
+  color: #a71515;
 }
 
 .skip-nav-link {
@@ -161,6 +177,7 @@ h3 {
 
 .cta:hover {
   background-color: var(--medium_green);
+  transition: 0.5s;
 }
 
 .cta-send,
@@ -183,6 +200,7 @@ h3 {
 
 .loadmore-cta:hover {
   background-color: var(--medium_blue);
+  transition: 0.5s;
 }
 
 .back-button {
@@ -267,6 +285,7 @@ footer > p {
 
 .latest-posts_card-container:hover {
   background-color: var(--medium_blue);
+  transition: 0.5s;
 }
 
 .latest-posts_card-image {
@@ -672,7 +691,7 @@ textarea {
     text-align: left;
   }
   .cta-card {
-    margin: 10px 15px 15px auto;
+    margin: 10px 35px 15px auto;
   }
 
   /*About & Contact page*/
