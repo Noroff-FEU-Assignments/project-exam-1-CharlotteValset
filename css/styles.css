@@ -263,14 +263,24 @@ footer > p {
   line-height: 177.9%;
 }
 /*Carousel card*/
-.carousel-mobile {
+.carousel-container {
   display: flex;
   justify-content: center;
+  gap: 23px;
+}
+
+.carousel-mobile {
+  display: flex;
+  max-width: 980px;
+  gap: 10px;
 }
 
 .carousel-arrow {
+  /*  height: 222px;
+  margin: 5px 5px; */
   height: 222px;
   margin: 5px 5px;
+  padding: 0px 20px;
 }
 
 .latest-posts_card-container {
@@ -305,6 +315,7 @@ footer > p {
   max-width: 90%;
   margin: 43px auto 30px auto;
   background-color: var(--light_beige);
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.25);
 }
 
 .blog_card-image {
@@ -335,6 +346,7 @@ footer > p {
   display: flex;
   flex-direction: column;
   margin: 0px auto 20px auto;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.25);
 }
 
 .blog-post_heading {
@@ -692,6 +704,12 @@ textarea {
   }
   .cta-card {
     margin: 10px 35px 15px auto;
+  }
+
+  /*Blog specific page*/
+
+  .blog-post_container {
+    max-width: 80%;
   }
 
   /*About & Contact page*/

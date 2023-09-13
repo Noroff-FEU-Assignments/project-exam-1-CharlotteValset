@@ -5,33 +5,26 @@ import { createMessage } from "./errorMessage.js";
 const json = await getBlogPosts(`${baseApiUrl}${endpointApiUrl}`);
 const errorMessage = createMessage("error");
 
-const latestPostsContainer = document.querySelector(".carousel-mobile");
+const blogCardContainer = document.querySelector(".blog_card-container");
 
-async function fetchLatestPostsImage() {
+async function fetchBlogCardContent() {
   try {
-    latestPostsContainer.innerHTML = "";
+    blogCardContainer.innerHTML = "";
 
-    for (let i = 0; i < json.length; i++) {
-      if (i === 4) {
-        break;
-      }
+    const blogCardImageContainer = document.createElement("a");
+    blogCardImageContainer.href = `blog-specific-page.html?id=${json[9].id}`;
+    blogCardContainer.appendChild(blogCardImageContainer);
 
-      const latestPostsCard = document.createElement("a");
-      latestPostsCard.href = `blog-specific-page.html?id=${json[i].id}`;
-      latestPostsCard.classList = "carousel-mobile";
-      latestPostsContainer.appendChild(latestPostsCard);
-
-      const latestPostsCardImage = document.createElement("img");
-      latestPostsCardImage.setAttribute("alt", `${json[i].acf.images.alt}`);
-      latestPostsCardImage.classList = "latest-posts_card-image";
-      latestPostsCardImage.src = `${json[i].acf.images.url}`;
-      latestPostsCard.appendChild(latestPostsCardImage);
-    }
+    const blogCardImage = document.createElement("img");
+    blogCardImage.setAttribute("alt", `${json[9].acf.images.alt}`);
+    blogCardImage.classList = "blog_card-image";
+    blogCardImage.src = `${json[9].acf.images.url}`;
+    blogCardImageContainer.appendChild(blogCardImage);
   } catch (error) {
-    console.log("Ooops, something happend!", error);
-    latestPostsContainer.innerHTML = errorMessage;
+    console.log("An error occured", error);
+    blogCardContainer.innerHTML = errorMessage;
     throw new Error(error);
   }
 }
 
-fetchLatestPostsImage();
+fetchBlogCardContent();
