@@ -710,17 +710,17 @@ textarea {
 
   .hero-image {
     top: 34px;
-    max-width: 74%;
-    left: 23%;
+    max-width: 100%;
+    left: 15%;
     position: relative;
   }
   .text-box_container {
     gap: 27px;
-    max-width: 44%;
-    height: 300px;
+    max-width: 52%;
+    height: 319px;
     position: relative;
     bottom: 373px;
-    left: 3%;
+    left: -9%;
     padding: 20px 25px;
   }
 

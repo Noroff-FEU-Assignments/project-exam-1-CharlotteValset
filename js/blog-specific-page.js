@@ -17,6 +17,8 @@ async function fetchBlogSpecificContent() {
   try {
     blogPostContainer.innerHTML = "";
 
+    document.title = `My Coffee Corner | ${jsonSpecific.acf.title}`;
+
     const blogPostTitle = document.createElement("h1");
     blogPostTitle.className = "blog-post_heading";
     blogPostTitle.innerText = jsonSpecific.acf.title;
