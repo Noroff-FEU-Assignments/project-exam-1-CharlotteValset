@@ -97,3 +97,8 @@ window.onclick = function (event) {
     modalContainer.style.display = "none";
   }
 };
+window.addEventListener("touchstart", function (event) {
+  if (event.target == modalContainer) {
+    modalContainer.style.display = "none";
+  }
+});
