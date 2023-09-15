@@ -23,6 +23,45 @@ body {
   font-family: var(--font-family);
 }
 
+/*Carousel*/
+.carousel-container {
+  height: 200px;
+  width: 732px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: red;
+}
+
+.button-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+}
+
+.latest-posts_card-container {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  left: 0;
+  transition: all 1s ease;
+}
+
+.card {
+  background: black;
+  min-width: 200px;
+  height: 200px;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
 /* ERROR_MESSAGE */
 .message {
   border: 2px solid #a71515;
@@ -267,6 +306,46 @@ footer > p {
   margin: 0px 20px 20px 20px;
   line-height: 177.9%;
 }
+
+/*Carousel*/
+.carousel-container {
+  height: 200px;
+  width: 732px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: red;
+}
+
+.button-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+}
+
+.latest-posts_card-container {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  left: 0;
+  transition: all 1s ease;
+}
+
+.card {
+  background: black;
+  min-width: 200px;
+  height: 200px;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
 /*Carousel card*/
 .carousel-container {
   display: flex;
@@ -275,20 +354,19 @@ footer > p {
 }
 
 .carousel-mobile {
-  display: flex;
+  display: block;
   max-width: 980px;
-  gap: 10px;
 }
 
 .carousel-arrow {
   /*  height: 222px;
   margin: 5px 5px; */
   height: 222px;
-  margin: 5px 5px;
-  padding: 0px 20px;
+  /*   margin: 5px 5px;
+  padding: 0px 20px; */
 }
 
-.latest-posts_card-container {
+.latest-posts_card {
   width: 223px;
   height: 220px;
   background-color: var(--light_blue);
@@ -298,7 +376,7 @@ footer > p {
   margin: 5px 0px;
 }
 
-.latest-posts_card-container:hover {
+.latest-posts_card:hover {
   background-color: var(--medium_blue);
   transition: 0.5s;
 }
@@ -311,7 +389,7 @@ footer > p {
 }
 
 .latest-posts_card-heading {
-  padding: 10px;
+  padding: 0px;
 }
 
 /*BLOG LIST PAGE*/
