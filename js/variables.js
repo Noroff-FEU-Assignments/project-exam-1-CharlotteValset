@@ -1,5 +1,5 @@
 export const baseApiUrl = "https://mycoffeecorner.charlottevalset.no/wp-json/wp/v2/posts/";
-export const endpointApiUrl = "?acf_format=standard&per_page=20";
+export const endpointApiUrl = "?acf_format=standard&per_page=12";
 
 export async function getBlogPosts(url) {
   try {

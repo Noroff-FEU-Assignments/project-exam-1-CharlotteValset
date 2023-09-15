@@ -23,45 +23,6 @@ body {
   font-family: var(--font-family);
 }
 
-/*Carousel*/
-.carousel-container {
-  height: 200px;
-  width: 732px;
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-  background-color: red;
-}
-
-.button-wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-}
-
-.latest-posts_card-container {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  width: 100%;
-  display: flex;
-  gap: 10px;
-  position: absolute;
-  left: 0;
-  transition: all 1s ease;
-}
-
-.card {
-  background: black;
-  min-width: 200px;
-  height: 200px;
-  margin-right: 1rem;
-  display: inline-block;
-}
-
 /* ERROR_MESSAGE */
 .message {
   border: 2px solid #a71515;
@@ -100,7 +61,7 @@ header {
   position: fixed;
   top: 0px;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   background-color: var(--white);
@@ -309,71 +270,40 @@ footer > p {
 
 /*Carousel*/
 .carousel-container {
-  height: 200px;
-  width: 732px;
+  height: 234px;
+  width: 780px;
   position: relative;
   overflow: hidden;
   margin: 0 auto;
-  background-color: red;
 }
 
-.button-wrapper {
+.carousel-button-container {
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: absolute;
 }
 
-.latest-posts_card-container {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  width: 100%;
-  display: flex;
-  gap: 10px;
-  position: absolute;
-  left: 0;
-  transition: all 1s ease;
-}
-
-.card {
-  background: black;
-  min-width: 200px;
-  height: 200px;
-  margin-right: 1rem;
-  display: inline-block;
-}
-
-/*Carousel card*/
-.carousel-container {
-  display: flex;
-  justify-content: center;
-  gap: 23px;
-}
-
-.carousel-mobile {
-  display: block;
-  max-width: 980px;
-}
-
 .carousel-arrow {
-  /*  height: 222px;
-  margin: 5px 5px; */
   height: 222px;
-  /*   margin: 5px 5px;
-  padding: 0px 20px; */
+  cursor: pointer;
+}
+
+.latest-posts_card-container {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  left: 32px;
 }
 
 .latest-posts_card {
-  width: 223px;
-  height: 220px;
+  width: calc(100% / 3);
+  box-sizing: border-box;
+  height: 218px;
   background-color: var(--light_blue);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  margin: 5px 0px;
+  z-index: 2;
 }
 
 .latest-posts_card:hover {
@@ -382,14 +312,13 @@ footer > p {
 }
 
 .latest-posts_card-image {
-  width: 198px;
-  height: 152px;
-  align-self: center;
-  margin: 13px auto 0px auto;
+  width: 210px;
+  height: 155px;
+  margin: 13px 10px 0px 10px;
 }
 
 .latest-posts_card-heading {
-  padding: 0px;
+  margin: 11px auto 0px auto;
 }
 
 /*BLOG LIST PAGE*/
@@ -608,10 +537,6 @@ textarea {
 
 /*TABLET*/
 @media only screen and (min-width: 700px) {
-  /*   body {
-    background-color: var(--light_blue);
-  } */
-
   header {
     position: fixed;
     display: flex;
@@ -755,12 +680,12 @@ textarea {
   }
 }
 
+@media only screen and (min-width: 798px) {
+  /*Legge inn carousel greier her?*/
+}
+
 /*DESKTOP*/
 @media only screen and (min-width: 1024px) {
-  /* body {
-    background-color: var(--light_grey);
-  } */
-
   header {
     padding: 0px;
   }

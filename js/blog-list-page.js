@@ -13,7 +13,7 @@ async function fetchblogCard() {
     const json = await getBlogPosts(`${baseApiUrl}${endpointApiUrl}`);
 
     for (let i = 0; i < json.length; i++) {
-      if (i === 6) {
+      if (i === 10) {
         break;
       }
 
