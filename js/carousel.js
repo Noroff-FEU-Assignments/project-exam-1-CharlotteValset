@@ -32,8 +32,6 @@ async function fetchAndCreateCards() {
       card.href = `/blog-specific-page.html?id=${json[i].id}`;
       carousel.appendChild(card);
 
-      console.log(card);
-
       const cardImage = document.createElement("img");
       cardImage.classList = "latest-posts_card-image";
       cardImage.setAttribute("alt", `${json[i].acf.images.alt}`);
