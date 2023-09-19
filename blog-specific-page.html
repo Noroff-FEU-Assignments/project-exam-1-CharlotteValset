@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <title>My Coffee Corner - Blog post title</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.svg" />
-    <meta name="desciption" content="Learn about coffee on My Coffee Corner" />
+    <meta
+      name="description"
+      content="Explore the rich world of coffee at My Coffee Corner. From brewing tips to coffee origins, embark on a caffeinated journey with our insightful blog posts. Discover the perfect cup of coffee today!"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <script src="./js/errorMessage.js" type="module"></script>
@@ -38,18 +41,21 @@
     </header>
     <main id="main">
       <button onclick="history.back()" class="back-button"><i class="fa-solid fa-chevron-left"></i>BACK</button>
-      <div class="blog-post_container"></div>
+      <article aria-label="Blog post" class="blog-post_container">
+        <div class="content-loader"></div>
+        <p>Loading...</p>
+      </article>
     </main>
     <footer>
-      <a href="https://www.facebook.com/"
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
         ><i class="fa-brands fa-facebook" title="Facebook link icon"></i
         ><span class="fa-sr-only">Facebook link icon</span></a
       >
-      <a href="https://www.instagram.com/"
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
         ><i class="fa-brands fa-instagram" title="Instagram link icon"></i
         ><span class="fa-sr-only">Instagram link icon</span></a
       >
-      <a href="https://twitter.com/"
+      <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"
         ><i class="fa-brands fa-twitter" title="Twitter link icon"></i
         ><span class="fa-sr-only">Twitter link icon</span></a
       >
