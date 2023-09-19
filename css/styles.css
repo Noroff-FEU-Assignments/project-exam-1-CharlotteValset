@@ -545,6 +545,7 @@ textarea {
   width: 219px;
   padding: 5px 5px;
   font-family: var(--font-family);
+  resize: none;
 }
 
 .form-error {
