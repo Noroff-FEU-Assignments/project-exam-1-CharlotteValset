@@ -90,8 +90,6 @@ blogImage.onclick = function () {
   modalAltText.innerText = blogImage.alt;
 };
 
-//Hvorfor får jeg ikke lukket modal der alt-text er??
-
 window.onclick = function (event) {
   if (event.target == modalContainer) {
     modalContainer.style.display = "none";

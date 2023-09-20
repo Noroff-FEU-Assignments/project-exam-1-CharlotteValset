@@ -58,9 +58,9 @@ function checkLength(value, len) {
     return false;
   }
 }
-
+// validate email function from Noroff with modified regEx pattern.
 function validateEmail(email) {
-  const regEx = /\S+@\S+\.\S+/;
+  const regEx = /\S+@\S+\.[a-zA-Z]{2,4}/;
   const patternMatches = regEx.test(email);
   return patternMatches;
 }

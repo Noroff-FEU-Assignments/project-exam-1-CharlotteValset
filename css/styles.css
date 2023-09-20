@@ -181,12 +181,14 @@ p {
 h1 {
   text-align: center;
   margin: 5px 0px;
+  letter-spacing: 0.5px;
 }
 
 h2,
 h3 {
   text-align: center;
   margin: 5px 0px;
+  letter-spacing: 0.5px;
 }
 
 /*BUTTONS*/
@@ -255,10 +257,12 @@ footer {
   text-align: center;
   color: var(--footer);
   padding: 20px 0px;
+  margin-top: auto;
 }
-
-.footer-margin-top {
-  margin-top: 120px;
+.body-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 footer > p {
@@ -377,6 +381,20 @@ footer > p {
   margin: 10px auto;
 }
 
+.back-to-top-cta {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+}
+
+.fa-angle-up {
+  /*   color: #a68c7d; */
+  color: var(--footer);
+  font-size: 3rem;
+  border: solid 2px;
+  border-radius: 50px;
+}
+
 /*BLOG SPECIFIC PAGE*/
 
 .blog-post_container {
@@ -433,11 +451,10 @@ footer > p {
   display: block;
   width: 70%;
   max-width: 1100px;
-  transition: filter 300ms ease-in;
 }
 
 #blog-image:hover {
-  filter: brightness(0.7);
+  cursor: pointer;
 }
 
 .modal {
@@ -735,7 +752,7 @@ textarea {
   .hero-image {
     top: 34px;
     max-width: 100%;
-    left: 15%;
+    left: 12%;
   }
   .text-box_container {
     gap: 27px;
@@ -743,7 +760,7 @@ textarea {
     height: 319px;
     position: relative;
     bottom: 373px;
-    left: -9%;
+    left: -13%;
     padding: 20px 25px;
   }
 
@@ -754,6 +771,7 @@ textarea {
 
   .blog_card-index {
     max-width: 1024px;
+    margin: 70px auto 50px auto;
   }
 
   .blog_card-image {
@@ -790,7 +808,16 @@ textarea {
   /*Blog specific page*/
 
   .blog-post_container {
-    max-width: 80%;
+    width: 85%;
+    max-width: 1050px;
+  }
+
+  .blog-post_text {
+    max-width: 85%;
+  }
+
+  #blog-image {
+    width: 85%;
   }
 
   /*About & Contact page*/
