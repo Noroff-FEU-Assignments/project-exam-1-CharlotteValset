@@ -12,52 +12,31 @@ const subjectError = document.querySelector("#subjectError");
 const addMessage = document.querySelector("#addMessage");
 const addMessageError = document.querySelector("#addMessageError");
 
+function checkLength(value, minLength) {
+  return value.trim().length > minLength;
+}
+
+function validateInput(input, errorElement, minLength) {
+  const valid = checkLength(input.value, minLength);
+  errorElement.style.display = valid ? "none" : "block";
+  return valid;
+}
+
 function validateForm(event) {
   event.preventDefault();
 
-  if (checkLength(firstName.value, 5) === true) {
-    firstNameError.style.display = "none";
-  } else {
-    firstNameError.style.display = "block";
-  }
+  const isFirstNameValid = validateInput(firstName, firstNameError, 5);
+  const isEmailValid = validateEmail(email.value);
+  const isSubjectValid = validateInput(subject, subjectError, 15);
+  const isAddMessageValid = validateInput(addMessage, addMessageError, 25);
 
-  if (validateEmail(email.value) === true) {
-    emailError.style.display = "none";
-  } else {
-    emailError.style.display = "block";
-  }
-
-  if (checkLength(subject.value, 15) === true) {
-    subjectError.style.display = "none";
-  } else {
-    subjectError.style.display = "block";
-  }
-
-  if (checkLength(addMessage.value, 25) === true) {
-    addMessageError.style.display = "none";
-  } else {
-    addMessageError.style.display = "block";
-  }
-
-  if (
-    checkLength(firstName.value, 5) &&
-    validateEmail(email.value) &&
-    checkLength(subject.value, 15) &&
-    checkLength(addMessage.value, 25)
-  ) {
+  if (isFirstNameValid && isEmailValid && isSubjectValid && isAddMessageValid) {
     contactForm.submit();
   }
+  emailError.style.display = isEmailValid ? "none" : "block";
 }
 
 contactForm.addEventListener("submit", validateForm);
-
-function checkLength(value, len) {
-  if (value.trim().length > len) {
-    return true;
-  } else {
-    return false;
-  }
-}
 // validate email function from Noroff with modified regEx pattern.
 function validateEmail(email) {
   const regEx = /\S+@\S+\.[a-zA-Z]{2,4}/;

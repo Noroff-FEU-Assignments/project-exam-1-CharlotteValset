@@ -252,6 +252,10 @@ h3 {
 
 /*FOOTER*/
 
+.footer-margin-top {
+  margin-top: 60px;
+}
+
 footer {
   background-color: var(--medium_beige);
   text-align: center;

@@ -78,6 +78,7 @@ async function fetchBlogSpecificContent() {
 
 fetchBlogSpecificContent();
 
+// Modal inspired of https://www.w3schools.com/howto/howto_css_modal_images.asp
 const modalContainer = document.getElementById("modal-container");
 
 const blogImage = document.getElementById("blog-image");
