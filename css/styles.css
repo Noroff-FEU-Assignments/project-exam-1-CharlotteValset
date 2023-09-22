@@ -250,6 +250,10 @@ h3 {
   border: none;
 }
 
+.new-message-cta {
+  margin: 10px auto;
+}
+
 /*FOOTER*/
 
 footer {
@@ -581,6 +585,14 @@ textarea {
   font-size: 0.8rem;
   margin-top: 2px;
   width: 219px;
+}
+
+.cta-contact-layout {
+  display: flex;
+}
+
+.message-sent-text {
+  margin-top: 20px;
 }
 
 /*TABLET*/
@@ -916,5 +928,9 @@ textarea {
   .cta-send {
     margin: 20px auto;
     width: 170px;
+  }
+
+  .new-message-cta {
+    margin: 20px 0px 10px 15px;
   }
 }
