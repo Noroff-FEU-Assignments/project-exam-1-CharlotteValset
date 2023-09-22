@@ -252,10 +252,6 @@ h3 {
 
 /*FOOTER*/
 
-.footer-margin-top {
-  margin-top: 60px;
-}
-
 footer {
   background-color: var(--medium_beige);
   text-align: center;
@@ -279,6 +275,12 @@ footer > p {
   font-size: 2rem;
   color: var(--footer);
   padding: 6px 12px;
+}
+
+.fa-facebook:hover,
+.fa-instagram:hover,
+.fa-twitter:hover {
+  color: #66866d;
 }
 /* HOMEPAGE*/
 
@@ -385,18 +387,22 @@ footer > p {
   margin: 10px auto;
 }
 
-.back-to-top-cta {
+.back-to-top-cta-layout {
   display: flex;
   justify-content: flex-end;
   margin: 20px;
 }
 
 .fa-angle-up {
-  /*   color: #a68c7d; */
   color: var(--footer);
   font-size: 3rem;
   border: solid 2px;
   border-radius: 50px;
+}
+
+.fa-angle-up:hover {
+  background-color: #d3f5da;
+  color: #719178;
 }
 
 /*BLOG SPECIFIC PAGE*/
@@ -634,12 +640,12 @@ textarea {
     position: relative;
   }
   .text-box_container {
-    gap: 7px;
-    max-width: 48%;
-    height: 310px;
+    gap: 15px;
+    max-width: 52%;
+    height: 292px;
     position: relative;
-    bottom: 323px;
-    left: 2%;
+    bottom: 318px;
+    left: 1%;
     padding: 15px 20px;
   }
 
@@ -760,12 +766,16 @@ textarea {
   }
   .text-box_container {
     gap: 27px;
-    max-width: 52%;
+    max-width: 55%;
     height: 319px;
     position: relative;
-    bottom: 373px;
+    bottom: 366px;
     left: -13%;
     padding: 20px 25px;
+  }
+
+  .welcome-text {
+    padding: 0px 12px;
   }
 
   .blog_card {
@@ -829,7 +839,6 @@ textarea {
   .about-container,
   .contact-container {
     max-width: 1285px;
-    height: 600px;
     margin: 44px auto;
     display: flex;
     flex-direction: row-reverse;
@@ -846,7 +855,7 @@ textarea {
 
   .about-content-container,
   .contact-content-container {
-    padding: 34px 20px;
+    padding: 34px 20px 0px 20px;
     width: 50%;
   }
 

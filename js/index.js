@@ -5,6 +5,7 @@ import { createMessage } from "./errorMessage.js";
 const indexBlogPostContainer = document.querySelector(".blog_card-container");
 const errorMessage = createMessage("error");
 
+//Function to fetch, create and display a certain blog post in a card
 async function fetchIndexBlogCard() {
   try {
     indexBlogPostContainer.innerHTML = "";
@@ -38,7 +39,7 @@ async function fetchIndexBlogCard() {
     const readMoreButton = document.createElement("a");
     readMoreButton.classList = "cta cta-card";
     readMoreButton.href = `blog-specific-page.html?id=${json[9].id}`;
-    readMoreButton.innerText = "Read more";
+    readMoreButton.innerText = "Find out more";
     blogCardTexContainer.appendChild(readMoreButton);
   } catch (error) {
     console.log(error);

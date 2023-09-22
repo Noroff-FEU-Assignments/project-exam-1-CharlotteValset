@@ -40,7 +40,7 @@ function createBlogCard(blogData) {
   const readMoreButton = document.createElement("a");
   readMoreButton.classList = "cta cta-card";
   readMoreButton.href = `blog-specific-page.html?id=${blogData.id}`;
-  readMoreButton.innerText = " Read more";
+  readMoreButton.innerText = "Find out more";
   blogCardTexContainer.appendChild(readMoreButton);
 
   return blogCardContainer;
@@ -58,48 +58,64 @@ let totalBlogCards = 12;
 let displayedBlogCards = 0;
 let newOffset = 0;
 
+// Display blog cards
 async function displayBlogCards() {
   try {
+    //Check to see if we are loading more posts, if so exit function
     if (loadingMorePosts) {
       return;
     }
-
+    //Indicatior if we are currently loading more posts
     loadingMorePosts = true;
+
+    // Display loading spinner
     loaderContainer.style.display = "block";
 
+    //Calculate the offset for fetching blog posts
     const offset = newOffset;
+    // Determine how many blog cards to fetch.
+    // If initial set of cards has not been displayed, fetch "initialCardsToShow" (10).
+    // If not, fetch "cardsPerLoad" (2)
     const cardsToFetch = displayedBlogCards < initialCardsToShow ? initialCardsToShow : cardsPerLoad;
-    const json = await fetchBlogPosts(offset, cardsToFetch);
 
+    const json = await fetchBlogPosts(offset, cardsToFetch);
+    // If totalBlogCards is 0, update it with the total number of blog posts
     if (totalBlogCards === 0) {
       totalBlogCards = json.total;
     }
 
+    // If no blog posts is fetched, exit the function
     if (json.length === 0) {
       loadingMorePosts = false;
       loaderContainer.style.display = "none";
       return;
     }
 
+    // Loop through fetched json, create a blog card for each blog post and display it.
     json.forEach((blogData) => {
       const blogCard = createBlogCard(blogData);
       blogPostsListContainer.appendChild(blogCard);
     });
 
+    // If less than 10 blog posts were fetched, dont display loading indicator
     if (json.length < 10) {
       loadingMorePosts = false;
     }
 
+    // Check if all blog cards have been displayed
     if (displayedBlogCards >= totalBlogCards) {
+      // If so, remove load more button
       const loadMoreCta = document.querySelector(".loadmore-cta");
       if (loadMoreCta) {
         loadMoreCta.remove();
       }
     } else if (json.length === 10) {
+      // If there are more posts to load, create and display load more button
       const loadMoreCta = document.createElement("button");
       loadMoreCta.classList = "cta loadmore-cta";
       loadMoreCta.innerText = "Load more posts...";
       loadMoreCta.addEventListener("click", function () {
+        // If we are not loading more posts when button is clicked, show the next set of cards and remove button to prevent multiple clicks
         if (!loadingMorePosts) {
           newOffset += 10;
           displayBlogCards();
@@ -108,6 +124,7 @@ async function displayBlogCards() {
       });
       blogPostsListContainer.appendChild(loadMoreCta);
     } else {
+      // If not loading more posts and number of fetched posts are fewer than 10, loading is done
       loadingMorePosts = false;
     }
   } catch (error) {

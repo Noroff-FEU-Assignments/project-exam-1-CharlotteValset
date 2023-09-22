@@ -2,24 +2,33 @@ import { baseApiUrl, endpointApiUrl } from "./variables.js";
 import { getBlogPosts } from "./variables.js";
 import { createMessage } from "./errorMessage.js";
 
+// Carousel inspired by https://codepen.io/Nathan_James/pen/BvNLzO?editors=1010 and modified
+
 const carousel = document.getElementById("carousel");
 const leftButton = document.getElementById("leftButton");
 const rightButton = document.getElementById("rightButton");
 
 const errorMessage = createMessage("error");
+// Initialize the current position of the cards in the carousel
 let currentPosition = 0;
 
+// Function to display a specific set of cards in the carousel
 function showCards(visibleCards) {
   const cardElements = carousel.querySelectorAll(".latest-posts_card");
+
+  // Loop through card elements and set their display style
   cardElements.forEach((currentCard, i) => {
     if (i >= visibleCards && i < visibleCards + 3) {
+      // If the current card should be visible, display it
       currentCard.style.display = "block";
     } else {
+      // If the current card should be hidden, dont display it
       currentCard.style.display = "none";
     }
   });
 }
 
+// Function to fetch blog posts and create card elements and display them
 async function fetchAndCreateCards() {
   try {
     carousel.innerHTML = "";
@@ -50,16 +59,23 @@ async function fetchAndCreateCards() {
   }
 }
 
+// Function to display the next set of cards in the carousel
 function nextCards() {
+  // Calculate the new current position for the next set of cards
   currentPosition = (currentPosition + 3) % carousel.children.length;
+  // Show the cards at the new position
   showCards(currentPosition);
 }
 
+// Function to display the previous set of cards in the carousel
 function prevCards() {
+  // Calculate the new current position for the previous set of cards
   currentPosition = (currentPosition - 3 + carousel.children.length) % carousel.children.length;
+  // Show the cards at the new position
   showCards(currentPosition);
 }
 
+// Add event listeners to left and right buttons to navigate through cards
 leftButton.addEventListener("click", prevCards);
 rightButton.addEventListener("click", nextCards);
 
