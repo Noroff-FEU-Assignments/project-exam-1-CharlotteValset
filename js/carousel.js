@@ -29,7 +29,7 @@ function showCards(visibleCards) {
 }
 
 // Function to fetch blog posts and create card elements and display them
-async function etchAndCreateCards() {
+async function fetchAndCreateCards() {
   try {
     carousel.innerHTML = "";
 
