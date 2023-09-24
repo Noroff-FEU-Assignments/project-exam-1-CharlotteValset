@@ -35,6 +35,11 @@ body {
   margin: 20px auto;
 }
 
+.loader-layout {
+  margin: 24px auto;
+  width: 710px;
+}
+
 .content-loader {
   width: 70px;
   height: 70px;
