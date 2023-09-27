@@ -5,9 +5,9 @@ import { createMessage } from "./errorMessage.js";
 // Fetch Blog Posts
 const blogListEndApiUrl = "?acf_format=standard&per_page=10";
 
-async function fetchBlogPosts(offset, limit) {
+async function fetchBlogPosts(offset) {
   try {
-    return await getBlogPosts(`${baseApiUrl}${blogListEndApiUrl}&offset=${offset}&limit=${limit}`);
+    return await getBlogPosts(`${baseApiUrl}${blogListEndApiUrl}&offset=${offset}`);
   } catch (error) {
     throw new Error(error);
   }
