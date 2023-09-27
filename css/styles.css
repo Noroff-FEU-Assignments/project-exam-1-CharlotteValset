@@ -1,3 +1,5 @@
+/* GENERAL STYLES */
+
 :root {
   --font-family: "Nunito Sans", Arial, sans-serif;
   --medium_beige: #eadfce;
@@ -24,41 +26,7 @@ body {
   font-family: var(--font-family);
 }
 
-/* ERROR_MESSAGE */
-.message {
-  background-color: var(--error_box);
-  color: var(--error_text);
-  box-shadow: 0px 2px 2px 0px #00000040;
-  padding: 15px;
-  max-width: 275px;
-  text-align: center;
-  margin: 20px auto;
-}
-
-.loader-layout {
-  margin: 24px auto;
-  width: 710px;
-}
-
-.content-loader {
-  width: 70px;
-  height: 70px;
-  border: 10px solid var(--light_green);
-  border-top: 10px solid var(--medium_green);
-  border-radius: 50%;
-  margin: 20px auto;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
+/* --HEADER AND NAVIGATION */
 .skip-nav-link {
   position: absolute;
   overflow: hidden;
@@ -163,7 +131,7 @@ nav,
   display: none;
 }
 
-/*Headings & paragraphs*/
+/* -- HEADINGS AND PARAGRAPHS*/
 
 h1 {
   font-size: 1.5rem;
@@ -196,7 +164,7 @@ h3 {
   letter-spacing: 0.5px;
 }
 
-/*BUTTONS*/
+/* -- BUTTONS*/
 
 .cta {
   border-width: 0px;
@@ -259,7 +227,7 @@ h3 {
   margin: 10px auto;
 }
 
-/*FOOTER*/
+/* -- FOOTER*/
 
 footer {
   background-color: var(--medium_beige);
@@ -291,7 +259,46 @@ footer > p {
 .fa-twitter:hover {
   color: #66866d;
 }
-/* HOMEPAGE*/
+
+/* -- ERROR_MESSAGE */
+.message {
+  background-color: var(--error_box);
+  color: var(--error_text);
+  box-shadow: 0px 2px 2px 0px #00000040;
+  padding: 15px;
+  max-width: 275px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+/* -- LOADER */
+.loader-layout {
+  margin: 24px auto;
+  width: 710px;
+}
+
+.content-loader {
+  width: 70px;
+  height: 70px;
+  border: 10px solid var(--light_green);
+  border-top: 10px solid var(--medium_green);
+  border-radius: 50%;
+  margin: 20px auto;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* PAGE SPESIFIC STYLES */
+
+/* -- INDEX PAGE*/
 
 .hero-layout {
   display: flex;
@@ -323,7 +330,7 @@ footer > p {
   line-height: 177.9%;
 }
 
-/*Latest Posts*/
+/* -- INDEX PAGE - Latest Posts*/
 
 .carousel-button-container {
   display: none;
@@ -362,7 +369,7 @@ footer > p {
   margin: 11px auto 0px auto;
 }
 
-/*BLOG LIST PAGE & BLOG INDEX PAGE*/
+/* -- BLOG LIST PAGE & BLOG CARD on INDEX PAGE*/
 
 .blog-post-list-heading {
   margin-top: 80px;
@@ -414,7 +421,7 @@ footer > p {
   color: #719178;
 }
 
-/*BLOG SPECIFIC PAGE*/
+/* -- BLOG SPECIFIC PAGE*/
 
 .blog-post_container {
   background-color: var(--light_beige);
@@ -464,7 +471,7 @@ footer > p {
   margin-bottom: 0px;
 }
 
-/*Modal*/
+/* -- BLOG SPESIFIC PAGE - Modal*/
 #blog-image {
   margin: auto;
   display: block;
@@ -508,7 +515,7 @@ footer > p {
   height: 40px;
 }
 
-/*ABOUT PAGE*/
+/* -- ABOUT PAGE*/
 
 .about-textcontainer {
   padding: 0px 15px 0px 15px;
@@ -528,7 +535,7 @@ footer > p {
   padding: 0px 0px 10px 0px;
 }
 
-/*CONTACT PAGE*/
+/* -- CONTACT PAGE*/
 
 .contact-textcontainer {
   padding: 0px 15px 10px 15px;
@@ -602,6 +609,7 @@ textarea {
 
 /*TABLET*/
 @media only screen and (min-width: 795px) {
+  /* -- HEADER AND NAV*/
   .logo {
     position: fixed;
     z-index: 2;
@@ -643,6 +651,7 @@ textarea {
     display: none;
   }
 
+  /* -- INDEX PAGE*/
   .hero-layout {
     display: block;
     width: 701px;
@@ -676,7 +685,7 @@ textarea {
     margin: 0px;
   }
 
-  /*Carousel tablet & desktop*/
+  /* -- INDEX PAGE - Carousel (tablet & desktop)*/
 
   .carousel-container {
     height: 234px;
@@ -711,6 +720,7 @@ textarea {
     display: none;
   }
 
+  /* -- BLOG LIST PAGE & BLOG CARDS on INDEX PAGE*/
   .blog_card {
     display: flex;
   }
@@ -740,7 +750,7 @@ textarea {
     align-self: center;
   }
 
-  /*About & Contact page*/
+  /* -- ABOUT & CONTACT PAGE*/
 
   .about-container,
   .contact-container {
@@ -761,6 +771,7 @@ textarea {
 
 /*DESKTOP*/
 @media only screen and (min-width: 1024px) {
+  /* -- HEADER AND NAV*/
   .logo {
     max-width: 400px;
     margin-top: -12px;
@@ -771,6 +782,7 @@ textarea {
     padding: 0px;
   }
 
+  /* -- INDEX PAGE*/
   .hero-layout {
     height: 560px;
     margin: 0px auto 70px auto;
@@ -795,6 +807,7 @@ textarea {
     padding: 0px 12px;
   }
 
+  /* -- BLOG LIST PAGE & BLOG CARDS on INDEX PAGE*/
   .blog_card {
     width: 90%;
     max-width: 1200px;
@@ -836,7 +849,7 @@ textarea {
     margin: 10px 35px 15px auto;
   }
 
-  /*Blog specific page*/
+  /* -- BLOG SPECIFIC PAGE*/
 
   .blog-post_container {
     width: 85%;
@@ -851,7 +864,7 @@ textarea {
     width: 85%;
   }
 
-  /*About & Contact page*/
+  /* -- ABOUT & CONTACT PAGE*/
 
   .about-container,
   .contact-container {
@@ -906,6 +919,7 @@ textarea {
     margin-top: 10px;
   }
 
+  /* -- CONTACT PAGE - FORM*/
   .form-container {
     max-width: 563px;
   }
